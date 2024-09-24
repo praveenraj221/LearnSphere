@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive Computer Science Quiz</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-image: url('https://images.unsplash.com/photo-1531746790731-6c087fecd65a');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            color: #333;
+        }
+
+        h2 {
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #2575fc;
+        }
+
+        .form-check {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            font-size: 1.1rem;
+        }
+
+        .btn {
+            background-color: #2575fc;
+            border: none;
+            transition: background-color 0.3s ease;
+            font-size: 1.2rem;
+        }
+
+        .btn:hover {
+            background-color: #6a11cb;
+        }
+
+        .progress-bar {
+            background-color: #2575fc;
+        }
+
+        #result {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+            color: #fff;
+            background-color: #2575fc;
+            padding: 1rem;
+            border-radius: 5px;
+            margin-top: 2rem;
+        }
+
+        .form-check-label {
+            display: inline-block;
+            padding-left: 10px;
+        }
+
+        .question-number {
+            font-weight: bold;
+            color: #2575fc;
+            margin-right: 10px;
+        }
+
+        .background-filter {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 3rem 0;
+        }
+
+        .text-success {
+            color: green !important;
+        }
+
+        .text-warning {
+            color: orange !important;
+        }
+
+        .text-danger {
+            color: red !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="background-filter">
+        <div class="container my-5">
+            <h2>Comprehensive Computer Science Quiz (50 Questions)</h2>
+
+            <!-- Progress Bar -->
+            <div class="progress mb-4">
+                <div id="progressBar" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0"
+                    aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+
+            <!-- Quiz Form -->
+            <form id="quizForm">
+                <!-- Questions -->
+                <div id="quiz-questions">
+                    <!-- Sample Questions (Continue pattern till 50) -->
+
+                    <!-- HTML Questions -->
+                    <div class="form-check">
+                        <span class="question-number">1.</span>
+                        <label class="form-check-label">What does HTML stand for?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q1" value="correct"> Hyper Text Markup Language
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q1" value="wrong"> High Tech Machine Learning
+                        </div>
+                    </div>
+
+                    <div class="form-check">
+                        <span class="question-number">2.</span>
+                        <label class="form-check-label">Which of the following is the correct syntax for a link in HTML?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q2" value="correct">&lt;a href="url"&gt;Link&lt;/a&gt;
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q2" value="wrong">&lt;link href="url"&gt;Link&lt;/link&gt;
+                        </div>
+                    </div>
+
+                    <!-- CSS Questions -->
+                    <div class="form-check">
+                        <span class="question-number">3.</span>
+                        <label class="form-check-label">What is the correct CSS syntax to change the font size of an element?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q3" value="correct"> selector { font-size: 16px; }
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q3" value="wrong"> selector { size: 16px; }
+                        </div>
+                    </div>
+
+                    <div class="form-check">
+                        <span class="question-number">4.</span>
+                        <label class="form-check-label">How do you apply a CSS class to an HTML element?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q4" value="correct">&lt;div class="className"&gt;&lt;/div&gt;
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q4" value="wrong">&lt;div style="className"&gt;&lt;/div&gt;
+                        </div>
+                    </div>
+
+                    <!-- JavaScript Questions -->
+                    <div class="form-check">
+                        <span class="question-number">5.</span>
+                        <label class="form-check-label">Which method is used to find the length of a string in JavaScript?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q5" value="correct"> .length
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q5" value="wrong"> .size
+                        </div>
+                    </div>
+
+                    <div class="form-check">
+                        <span class="question-number">6.</span>
+                        <label class="form-check-label">How do you write a comment in JavaScript?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q6" value="correct"> // comment
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q6" value="wrong"> /* comment */
+                        </div>
+                    </div>
+
+                    <!-- Java Questions -->
+                    <div class="form-check">
+                        <span class="question-number">7.</span>
+                        <label class="form-check-label">What is the default value of a boolean variable in Java?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q7" value="correct"> false
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q7" value="wrong"> true
+                        </div>
+                    </div>
+
+                    <div class="form-check">
+                        <span class="question-number">8.</span>
+                        <label class="form-check-label">Which of these is a valid method declaration in Java?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q8" value="correct"> public void methodName() {}
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q8" value="wrong"> methodName() public void {}
+                        </div>
+                    </div>
+
+                    <!-- Python Questions -->
+                    <div class="form-check">
+                        <span class="question-number">9.</span>
+                        <label class="form-check-label">Which of these keywords is used to define a function in Python?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q9" value="correct"> def
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q9" value="wrong"> func
+                        </div>
+                    </div>
+
+                    <div class="form-check">
+                        <span class="question-number">10.</span>
+                        <label class="form-check-label">How do you insert a comment in Python?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q10" value="correct"> # comment
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q10" value="wrong"> /* comment */
+                        </div>
+                    </div>
+
+                    <!-- SQL Questions -->
+                    <div class="form-check">
+                        <span class="question-number">11.</span>
+                        <label class="form-check-label">Which SQL statement is used to extract data from a database?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q11" value="correct"> SELECT
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q11" value="wrong"> EXTRACT
+                        </div>
+                    </div>
+
+                    <div class="form-check">
+                        <span class="question-number">12.</span>
+                        <label class="form-check-label">What is the purpose of the SQL WHERE clause?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q12" value="correct"> To filter records
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q12" value="wrong"> To update records
+                        </div>
+                    </div>
+
+                    <!-- Database Management Questions -->
+                    <div class="form-check">
+                        <span class="question-number">13.</span>
+                        <label class="form-check-label">What is a primary key in a database?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q13" value="correct"> A unique identifier for a record
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q13" value="wrong"> A foreign key reference
+                        </div>
+                    </div>
+
+                    <div class="form-check">
+                        <span class="question-number">14.</span>
+                        <label class="form-check-label">What is a foreign key in a database?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q14" value="correct"> A key used to link two tables
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q14" value="wrong"> A unique key for a record
+                        </div>
+                    </div>
+
+                    <!-- Object-Oriented Programming Questions -->
+                    <div class="form-check">
+                        <span class="question-number">15.</span>
+                        <label class="form-check-label">What is encapsulation in object-oriented programming?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q15" value="correct"> The bundling of data with methods that operate on that data
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q15" value="wrong"> The ability of a class to inherit from another class
+                        </div>
+                    </div>
+
+                    <div class="form-check">
+                        <span class="question-number">16.</span>
+                        <label class="form-check-label">What is inheritance in object-oriented programming?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q16" value="correct"> The ability of a class to inherit properties and methods from another class
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q16" value="wrong"> The process of creating new objects
+                        </div>
+                    </div>
+
+                    <!-- Algorithms and Data Structures Questions -->
+                    <div class="form-check">
+                        <span class="question-number">17.</span>
+                        <label class="form-check-label">What is the time complexity of accessing an element in an array?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q17" value="correct"> O(1)
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q17" value="wrong"> O(n)
+                        </div>
+                    </div>
+
+                    <div class="form-check">
+                        <span class="question-number">18.</span>
+                        <label class="form-check-label">What is the main advantage of a linked list over an array?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q18" value="correct"> Dynamic size and efficient insertion/deletion
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q18" value="wrong"> Faster access time
+                        </div>
+                    </div>
+
+                    <!-- Networking Questions -->
+                    <div class="form-check">
+                        <span class="question-number">19.</span>
+                        <label class="form-check-label">What does HTTP stand for?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q19" value="correct"> HyperText Transfer Protocol
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q19" value="wrong"> HyperText Transfer Program
+                        </div>
+                    </div>
+
+                    <div class="form-check">
+                        <span class="question-number">20.</span>
+                        <label class="form-check-label">What is the primary purpose of DNS?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q20" value="correct"> To translate domain names to IP addresses
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q20" value="wrong"> To encrypt data transmitted over the internet
+                        </div>
+                    </div>
+
+                    <!-- Software Engineering Questions -->
+                    <div class="form-check">
+                        <span class="question-number">21.</span>
+                        <label class="form-check-label">What is Agile methodology?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q21" value="correct"> A set of principles for iterative development and collaboration
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q21" value="wrong"> A method for managing large-scale software projects
+                        </div>
+                    </div>
+
+                    <div class="form-check">
+                        <span class="question-number">22.</span>
+                        <label class="form-check-label">What is a Software Development Life Cycle (SDLC)?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q22" value="correct"> A series of phases in the development of software applications
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q22" value="wrong"> A methodology for managing team communication
+                        </div>
+                    </div>
+
+                    <!-- Cybersecurity Questions -->
+                    <div class="form-check">
+                        <span class="question-number">23.</span>
+                        <label class="form-check-label">What is a firewall?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q23" value="correct"> A network security system that monitors and controls incoming and outgoing network traffic
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q23" value="wrong"> A type of malware that spreads through email
+                        </div>
+                    </div>
+
+                    <div class="form-check">
+                        <span class="question-number">24.</span>
+                        <label class="form-check-label">What is encryption used for?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q24" value="correct"> To secure data by converting it into a code
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q24" value="wrong"> To compress data for faster transmission
+                        </div>
+                    </div>
+
+                    <!-- Operating Systems Questions -->
+                    <div class="form-check">
+                        <span class="question-number">25.</span>
+                        <label class="form-check-label">What is the main function of an operating system?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q25" value="correct"> To manage hardware and software resources on a computer
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q25" value="wrong"> To provide internet access to applications
+                        </div>
+                    </div>
+
+                    <div class="form-check">
+                        <span class="question-number">26.</span>
+                        <label class="form-check-label">What is a process in an operating system?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q26" value="correct"> An instance of a running program
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q26" value="wrong"> A set of instructions for the operating system
+                        </div>
+                    </div>
+
+                    <!-- Cloud Computing Questions -->
+                    <div class="form-check">
+                        <span class="question-number">27.</span>
+                        <label class="form-check-label">What is cloud computing?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q27" value="correct"> The delivery of computing services over the internet
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q27" value="wrong"> The installation of hardware in a data center
+                        </div>
+                    </div>
+
+                    <div class="form-check">
+                        <span class="question-number">28.</span>
+                        <label class="form-check-label">What is SaaS?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q28" value="correct"> Software as a Service
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q28" value="wrong"> Software and Storage
+                        </div>
+                    </div>
+
+                    <!-- Programming Languages Questions -->
+                    <div class="form-check">
+                        <span class="question-number">29.</span>
+                        <label class="form-check-label">What is a variable in programming?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q29" value="correct"> A storage location paired with a name
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q29" value="wrong"> A predefined function in a language
+                        </div>
+                    </div>
+
+                    <div class="form-check">
+                        <span class="question-number">30.</span>
+                        <label class="form-check-label">What does OOP stand for?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q30" value="correct"> Object-Oriented Programming
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q30" value="wrong"> Original Object Programming
+                        </div>
+                    </div>
+
+                    <!-- Web Development Questions -->
+                    <div class="form-check">
+                        <span class="question-number">31.</span>
+                        <label class="form-check-label">What is HTML?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q31" value="correct"> HyperText Markup Language
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q31" value="wrong"> HyperText Management Language
+                        </div>
+                    </div>
+
+                    <div class="form-check">
+                        <span class="question-number">32.</span>
+                        <label class="form-check-label">What is CSS used for?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q32" value="correct"> To style and layout web pages
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q32" value="wrong"> To create server-side scripts
+                        </div>
+                    </div>
+
+                    <!-- Data Science Questions -->
+                    <div class="form-check">
+                        <span class="question-number">33.</span>
+                        <label class="form-check-label">What is a dataset?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q33" value="correct"> A collection of related data
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q33" value="wrong"> A single data point
+                        </div>
+                    </div>
+
+                    <div class="form-check">
+                        <span class="question-number">34.</span>
+                        <label class="form-check-label">What is machine learning?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q34" value="correct"> A type of artificial intelligence that allows systems to learn from data
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q34" value="wrong"> A method for manually programming computers
+                        </div>
+                    </div>
+
+                    <!-- Miscellaneous Questions -->
+                    <div class="form-check">
+                        <span class="question-number">35.</span>
+                        <label class="form-check-label">What does API stand for?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q35" value="correct"> Application Programming Interface
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q35" value="wrong"> Automated Programming Interface
+                        </div>
+                    </div>
+
+                    <div class="form-check">
+                        <span class="question-number">36.</span>
+                        <label class="form-check-label">What is an IDE?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q36" value="correct"> Integrated Development Environment
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q36" value="wrong"> Interactive Development Environment
+                        </div>
+                    </div>
+
+                    <!-- Databases Questions -->
+                    <div class="form-check">
+                        <span class="question-number">37.</span>
+                        <label class="form-check-label">What is a database schema?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q37" value="correct"> The structure that defines the organization of data in a database
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q37" value="wrong"> A database management system
+                        </div>
+                    </div>
+
+                    <div class="form-check">
+                        <span class="question-number">38.</span>
+                        <label class="form-check-label">What is normalization in databases?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q38" value="correct"> The process of organizing data to reduce redundancy
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q38" value="wrong"> The process of creating indexes
+                        </div>
+                    </div>
+
+                    <!-- Project Management Questions -->
+                    <div class="form-check">
+                        <span class="question-number">39.</span>
+                        <label class="form-check-label">What is the purpose of a project charter?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q39" value="correct"> To outline the objectives, scope, and participants of a project
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q39" value="wrong"> To list the project tasks and deadlines
+                        </div>
+                    </div>
+
+                    <div class="form-check">
+                        <span class="question-number">40.</span>
+                        <label class="form-check-label">What is a Gantt chart used for?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q40" value="correct"> To display a project schedule
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q40" value="wrong"> To track project costs
+                        </div>
+                    </div>
+
+                    <!-- Data Analysis Questions -->
+                    <div class="form-check">
+                        <span class="question-number">41.</span>
+                        <label class="form-check-label">What is data analysis?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q41" value="correct"> The process of inspecting and modeling data to discover useful information
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q41" value="wrong"> The process of creating data visualizations
+                        </div>
+                    </div>
+
+                    <div class="form-check">
+                        <span class="question-number">42.</span>
+                        <label class="form-check-label">What is a correlation in statistics?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q42" value="correct"> A measure of the relationship between two variables
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q42" value="wrong"> A method for collecting data
+                        </div>
+                    </div>
+
+                    <!-- Miscellaneous Questions -->
+                    <div class="form-check">
+                        <span class="question-number">43.</span>
+                        <label class="form-check-label">What does HTTPS stand for?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q43" value="correct"> HyperText Transfer Protocol Secure
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q43" value="wrong"> HyperText Transfer Protocol Standard
+                        </div>
+                    </div>
+
+                    <div class="form-check">
+                        <span class="question-number">44.</span>
+                        <label class="form-check-label">What is a software bug?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q44" value="correct"> An error or flaw in software
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q44" value="wrong"> A feature request from a user
+                        </div>
+                    </div>
+
+                    <!-- More Questions -->
+                    <div class="form-check">
+                        <span class="question-number">45.</span>
+                        <label class="form-check-label">What is a loop in programming?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q45" value="correct"> A control structure that repeats a block of code
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q45" value="wrong"> A data type in programming
+                        </div>
+                    </div>
+
+                    <div class="form-check">
+                        <span class="question-number">46.</span>
+                        <label class="form-check-label">What is an algorithm?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q46" value="correct"> A step-by-step procedure for solving a problem
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q46" value="wrong"> A programming language
+                        </div>
+                    </div>
+
+                    <div class="form-check">
+                        <span class="question-number">47.</span>
+                        <label class="form-check-label">What is a class in programming?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q47" value="correct"> A blueprint for creating objects
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q47" value="wrong"> A type of data structure
+                        </div>
+                    </div>
+
+                    <div class="form-check">
+                        <span class="question-number">48.</span>
+                        <label class="form-check-label">What is inheritance in OOP?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q48" value="correct"> A mechanism for creating new classes based on existing ones
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q48" value="wrong"> A method for deleting classes
+                        </div>
+                    </div>
+
+                    <div class="form-check">
+                        <span class="question-number">49.</span>
+                        <label class="form-check-label">What is encapsulation in OOP?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q49" value="correct"> The bundling of data and methods that operate on the data within one unit
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q49" value="wrong"> The process of extending classes
+                        </div>
+                    </div>
+
+                    <div class="form-check">
+                        <span class="question-number">50.</span>
+                        <label class="form-check-label">What is polymorphism in OOP?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q50" value="correct"> The ability of different classes to be treated as instances of the same class through a common interface
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q50" value="wrong"> The ability to create multiple instances of a class
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
